@@ -1,0 +1,27 @@
+#List
+
+f = open("a1.txt","r")
+
+e = open("a2.txt","r")
+
+
+def make_list(line):
+    '''Retruns a list of digits from each line in a file'''
+    temp = line.split()
+    a_list=[]
+    for chr in temp:
+        if chr.isdigit():
+            a_list.append(int(chr))
+    return a_list
+
+
+def temp (f,e):
+    for line in f:
+        x = make_list(line)
+        print(x)
+    for line in e:
+        u = make_list(line)
+        print(u)
+
+
+temp(f,e)
