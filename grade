@@ -1,0 +1,35 @@
+#Grades
+
+f = open("a1.txt","r")
+
+e = open("a2.txt","r")
+
+
+def get_grade(individual,total):
+    grade = (individual / total)*10
+    return grade
+
+
+def temp (f,e):
+    for line in f:
+        x = sum_grades(make_list(line))
+        print(x)
+    for line in e:
+        y = sum_grades(make_list(line))
+        print((y/x)*10)
+
+def sum_grades(list):
+    total_points = sum(list)
+    return total_points
+
+def make_list(line):
+    '''Retruns a list of digits from each line in a file'''
+    temp = line.split()
+    a_list=[]
+    for chr in temp:
+        if chr.isdigit():
+            a_list.append(int(chr))
+    return a_list
+
+
+temp(f,e)
