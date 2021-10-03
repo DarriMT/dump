@@ -1,0 +1,24 @@
+#Name
+
+f = open("a1.txt","r")
+
+e = open("a2.txt","r")
+
+
+def get_name(line):
+    '''returns a name/email adress from each line in a file'''
+    temp = line.split()
+    name = temp[0]
+    return name
+
+
+def temp (f,e):
+    for line in f:
+        x = get_name(line)
+        print(x)
+    for line in e:
+        u = get_name(line)
+        print(u)
+
+
+temp(f,e)
